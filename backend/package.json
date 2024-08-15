@@ -6,7 +6,9 @@
   "scripts": {
     "start": "dist/start.js",
     "build": "npx tsc",
-    "dev": "tsnd src/server.ts"
+    "dev": "tsnd src/server.ts",
+    "migrate:prod": "node dist/database/migration.js",
+    "migrate:dev": "ts-node src/database/migration.ts"
   },
   "keywords": [],
   "author": "",

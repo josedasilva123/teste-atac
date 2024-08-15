@@ -11,4 +11,5 @@ export const costumersRoutes = async (router: FastifyInstance) => {
     costumersController.create
   );
   router.get("/", costumersController.getMany);
+  router.get("/bestroute", costumersController.getBestRoute);
 };

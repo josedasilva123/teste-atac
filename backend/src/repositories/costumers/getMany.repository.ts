@@ -5,7 +5,7 @@ import {
 } from "../../interfaces/costumers.interface";
 
 export const getMany = async (params: ICostumerSearchParams = {}) => {
-  let queryString = "SELECT * FROM costumers";
+  let queryString = "SELECT id, name, email, phone FROM costumers";
   let values: string[] = [];
 
   if (params.name) {

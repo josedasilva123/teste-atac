@@ -10,7 +10,7 @@ export const getMany = async (params: ICostumerSearchParams = {}) => {
 
   if (params.name) {
     queryString = queryString + " WHERE name ILIKE $1";
-    values.push(params.name);
+    values.push(`%${params.name}%`);
   }
 
   queryString = queryString + ";";

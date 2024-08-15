@@ -1,12 +1,13 @@
-export interface ICostumer{
-    id: number;
-    name: string;
-    email: string;
-    phone: string;
-}
+import { z } from "zod";
+import {
+  costumerCreateDataSchema,
+  costumerSchema,
+} from "../schemas/costumers.schema";
 
-export type TCreateCostumerData = Pick<ICostumer, "name" | "email" | "phone">;
+export type ICostumer = z.infer<typeof costumerSchema>;
 
-export interface ICostumerSearchParams{
-    name?: string;
+export type TCreateCostumerData = z.infer<typeof costumerCreateDataSchema>;
+
+export interface ICostumerSearchParams {
+  name?: string;
 }

@@ -1,0 +1,32 @@
+.box{
+    padding: 30px clamp(16px, 3vw, 30px);
+    background: var(--color-white);
+    border-radius: 4px;
+    box-shadow: var(--shadow-primary);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    @media (max-width: 850px){
+        flex-direction: column;
+    }
+
+    form{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .buttonBox{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        @media (max-width: 480px){
+            flex-direction: column;
+        }
+    }
+}

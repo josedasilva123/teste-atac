@@ -5,6 +5,7 @@ import { Icon } from "../../../../../shared/fragments/Icon";
 import { useCostumers } from "../../../../providers/CostumersProvider/useCostumers";
 import { CreateCostumerModal } from "../../../../scructures/modals/CreateCostumerModal";
 import { BestRouteModal } from "../../../../scructures/modals/BestRouteModal";
+import styles from "./style.module.scss";
 
 interface FormValues {
   search: string;
@@ -21,7 +22,7 @@ export function Controls() {
   };
 
   return (
-    <div>
+    <div className={styles.box}>
       <form onSubmit={handleSubmit(submit)}>
         <Input
           type="text"
@@ -39,8 +40,10 @@ export function Controls() {
           <Icon icon="search" />
         </Button>
       </form>
-      <CreateCostumerModal />
-      <BestRouteModal />
+      <div className={styles.buttonBox}>
+        <CreateCostumerModal />
+        <BestRouteModal />
+      </div>
     </div>
   );
 }

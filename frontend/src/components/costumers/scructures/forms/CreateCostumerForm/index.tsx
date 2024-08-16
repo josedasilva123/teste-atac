@@ -3,6 +3,8 @@ import { Input } from "../../../../shared/fragments/_fields/Input";
 import { Button } from "../../../../shared/fragments/Button";
 import { useState } from "react";
 import { useCostumers } from "../../../providers/CostumersProvider/useCostumers";
+import { AxiosError } from "axios";
+import { toast } from "react-toastify";
 
 export interface CreateCostumerValues {
   name: string;
@@ -30,6 +32,12 @@ export function CreateCostumerForm({ callback }: Props) {
       if (callback) callback();
     } catch (error) {
       console.log(error);
+      if(error instanceof AxiosError){
+        const axiosError = error as AxiosError<Error>;
+        if(axiosError.response?.data.message === "Costumer already registered."){
+          toast.error("E-mail já cadastrado.")
+        }
+      }
     } finally {
       setLoading(false);
     }

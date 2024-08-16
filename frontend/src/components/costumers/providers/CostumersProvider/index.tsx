@@ -6,6 +6,7 @@ import { QueryKeys } from "../../../../enums/queries.enum";
 import { ICostumer } from "../../../../interfaces/costumers.interface";
 import { CreateCostumerValues } from "../../scructures/forms/CreateCostumerForm";
 import { Context } from "./_interface";
+import { toast } from "react-toastify";
 
 export const CostumerContext = createContext({} as Context);
 
@@ -43,6 +44,7 @@ export function CostumerProvider({ children }: ProviderProps) {
         [QueryKeys.COSTUMERS, search],
         (costumerList: ICostumer[]) => [...costumerList, data]
       );
+      toast.success("Cliente adicionado com sucesso!")
     },
   });
 

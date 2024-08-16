@@ -1,7 +1,8 @@
 import FocusTrap from "focus-trap-react";
 import { Icon } from "../../fragments/Icon";
-import { useOutClick } from "../../../../hooks/useOutclick";
-import { useKeyboard } from "../../../../hooks/useKeyBoard";
+import { createPortal } from "react-dom";
+import { useOutClick } from "../../../../hooks/useOutClick";
+import { useKeyboard } from "../../../../hooks/useKeyboard";
 
 interface Props {
   children: React.ReactNode;
@@ -12,7 +13,7 @@ export function Modal({ children, onClose }: Props) {
   const modalRef = useOutClick<HTMLDivElement>(onClose);
   const { ref: closeButtonRef } = useKeyboard<HTMLButtonElement>("escape");
 
-  return (
+  return createPortal(
     <div>
       <FocusTrap>
         <div role="dialog" ref={modalRef}>
@@ -23,10 +24,11 @@ export function Modal({ children, onClose }: Props) {
             ref={closeButtonRef}
           >
             <Icon icon="close" />
-            {children}
           </button>
+          {children}
         </div>
       </FocusTrap>
-    </div>
+    </div>,
+    document.body
   );
 }

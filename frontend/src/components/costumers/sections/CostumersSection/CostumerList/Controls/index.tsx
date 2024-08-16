@@ -3,6 +3,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { Button } from "../../../../../shared/fragments/Button";
 import { Icon } from "../../../../../shared/fragments/Icon";
 import { useCostumers } from "../../../../providers/CostumersProvider/useCostumers";
+import { CreateCostumerModal } from "../../../../scructures/modals/CreateCostumerModal";
 
 interface FormValues {
   search: string;
@@ -31,6 +32,7 @@ export function Controls() {
           <Icon icon="search" />
         </Button>
       </form>
+      <CreateCostumerModal />
     </div>
   );
 }

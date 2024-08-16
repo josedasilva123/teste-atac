@@ -22,7 +22,7 @@ export const migrate = async () => {
         "x" INTEGER NOT NULL,
         "y" INTEGER NOT NULL
     );`);
-    await client.release();
+    client.release();
     console.log("--Migration sucessfully--");
   } catch (error) {
     console.log("--Migration failed--");

@@ -4,7 +4,7 @@ export type TextTags = "p" | "span";
 
 export type TextColors = "white" | "";
 
-interface Props extends HTMLAttributes<HTMLElement> {
+interface Props extends Omit<HTMLAttributes<HTMLElement>, "className"> {
   children: React.ReactNode;
   tag: TextTags;
   textAlign?: "center" | "";

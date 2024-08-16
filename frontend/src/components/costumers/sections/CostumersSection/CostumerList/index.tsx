@@ -33,7 +33,9 @@ export function CostumerList() {
           ))}
         </ul>
       ) : (
-        <Text tag="p" className={styles.notfound}>Nenhum cliente encontrado</Text>
+        <div className={styles.notfound}>
+          <Text tag="p">Nenhum cliente encontrado</Text>
+        </div>
       )}
     </>
   );

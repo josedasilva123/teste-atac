@@ -95,3 +95,5 @@ Padrão de resposta
 	]
 }
 ```
+
+Você também pode verificar o funcionamento das rotas no Insomnia, utilizando o arquivo (AtacInsomnia.json)

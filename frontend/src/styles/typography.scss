@@ -31,6 +31,10 @@
   &.four {
     font-size: clamp(1.125rem, 3.5vw, 1.5rem);
   }
+
+  &.five{
+    font-size: 1rem;
+  }
 }
 
 .text {

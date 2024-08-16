@@ -3,7 +3,7 @@ import { HTMLAttributes } from "react";
 interface Props extends Omit<HTMLAttributes<HTMLElement>, "className"> {
   children: React.ReactNode;
   tag: "h1" | "h2" | "h3" | "h4";
-  titleSize: "one" | "two" | "three" | "four";
+  titleSize: "one" | "two" | "three" | "four" | "five";
   textAlign?: "center" | "";
   titleColor?: "white" | "";
 }

@@ -13,7 +13,7 @@ export function CostumerCard({ costumer }: Props) {
       <Text tag="p">{costumer.email}</Text>
       <Text tag="p">{costumer.phone}</Text>
       <div>
-        <h4>Coordenadas</h4>
+        <Title tag="h4" titleSize="five">Coordenadas</Title>
         <Text tag="p">X: {costumer.x}</Text>
         <Text tag="p">Y: {costumer.y}</Text>
       </div>

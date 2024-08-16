@@ -3,6 +3,7 @@ import { CostumerCard } from "../../../scructures/cards/CostumerCard";
 import { Controls } from "./Controls";
 import { Button } from "../../../../shared/fragments/Button";
 import { useCostumers } from "../../../providers/CostumersProvider/useCostumers";
+import styles from "./style.module.scss";
 
 export function CostumerList() {
   const { search, setSearch, isLoading, costumerList } = useCostumers();
@@ -14,7 +15,7 @@ export function CostumerList() {
       <Controls />
 
       {search ? (
-        <div>
+        <div className={styles.search}>
           <Text tag="p">
             Resultados de busca para <strong>{search}</strong> -{" "}
             {costumerList?.length}
@@ -26,7 +27,7 @@ export function CostumerList() {
       ) : null}
 
       {costumerList && costumerList.length > 0 ? (
-        <ul>
+        <ul className={styles.list}>
           {costumerList?.map((costumer) => (
             <CostumerCard key={costumer.id} costumer={costumer} />
           ))}

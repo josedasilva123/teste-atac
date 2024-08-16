@@ -1,29 +1,17 @@
-import { useQuery } from "@tanstack/react-query";
-import { QueryKeys } from "../../../../../enums/queries.enum";
-import { useState } from "react";
-import { costumersRequest } from "../../../../../data/costumers/_index";
 import { Text } from "../../../../shared/fragments/_content/Text";
-import { CostumerCard } from "../../../scructures/CostumerCard";
+import { CostumerCard } from "../../../scructures/cards/CostumerCard";
 import { Controls } from "./Controls";
 import { Button } from "../../../../shared/fragments/Button";
+import { useCostumers } from "../../../providers/CostumersProvider/useCostumers";
 
 export function CostumerList() {
-  const [search, setSearch] = useState("");
-
-  const { data: costumerList, isLoading } = useQuery({
-    queryKey: [QueryKeys.COSTUMERS, search],
-    queryFn: async () => {
-      const data = await costumersRequest.getMany({ name: search });
-
-      return data;
-    },
-  });
+  const { search, setSearch, isLoading, costumerList } = useCostumers();
 
   return isLoading ? (
     <Text tag="p">Carregando...</Text>
   ) : (
     <>
-      <Controls setSearch={setSearch} />
+      <Controls />
 
       {search ? (
         <div>

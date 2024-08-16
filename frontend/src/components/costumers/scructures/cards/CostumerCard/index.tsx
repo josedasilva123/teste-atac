@@ -1,4 +1,4 @@
-import { ICostumer } from "../../../../interfaces/costumers.interface";
+import { ICostumer } from "../../../../../interfaces/costumers.interface";
 
 interface Props {
   costumer: ICostumer;

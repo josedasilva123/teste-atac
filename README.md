@@ -1,6 +1,6 @@
 # Teste Atac
 
-Uma aplicação fullstack construída com React (Vite) no front-end e Node no back-end.
+Uma aplicação fullstack construída com React (Vite) no front-end e NodeJS (Fastify) no back-end.
 
 ## Rodando a aplicação com Docker (Docker Compose)
 

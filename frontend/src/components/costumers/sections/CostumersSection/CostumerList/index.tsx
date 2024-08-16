@@ -33,7 +33,7 @@ export function CostumerList() {
           ))}
         </ul>
       ) : (
-        <Text tag="p">Nenhum cliente encontrado</Text>
+        <Text tag="p" className={styles.notfound}>Nenhum cliente encontrado</Text>
       )}
     </>
   );

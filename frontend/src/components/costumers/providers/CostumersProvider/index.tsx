@@ -40,7 +40,7 @@ export function CostumerProvider({ children }: ProviderProps) {
     onSuccess: (data) => {
       setSearch("");
       client.setQueryData(
-        [QueryKeys.COSTUMERS],
+        [QueryKeys.COSTUMERS, search],
         (costumerList: ICostumer[]) => [...costumerList, data]
       );
     },

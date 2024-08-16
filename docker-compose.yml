@@ -6,11 +6,14 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
     environment:
-      NODE_ENV: production  
+      NODE_ENV: development
     ports:
       - "8080:8080"
     depends_on:
       - backend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules  
 
   backend:
     build:
@@ -20,6 +23,7 @@ services:
       - "3001:3001"
     volumes:
       - ./backend:/app
+      - /app/node_modules 
     environment:
       - DB_USER=johndoe
       - DB_PASSWORD=johndoe123

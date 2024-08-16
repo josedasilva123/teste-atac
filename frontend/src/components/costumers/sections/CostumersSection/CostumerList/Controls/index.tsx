@@ -4,6 +4,7 @@ import { Button } from "../../../../../shared/fragments/Button";
 import { Icon } from "../../../../../shared/fragments/Icon";
 import { useCostumers } from "../../../../providers/CostumersProvider/useCostumers";
 import { CreateCostumerModal } from "../../../../scructures/modals/CreateCostumerModal";
+import { BestRouteModal } from "../../../../scructures/modals/BestRouteModal";
 
 interface FormValues {
   search: string;
@@ -33,6 +34,7 @@ export function Controls() {
         </Button>
       </form>
       <CreateCostumerModal />
+      <BestRouteModal />
     </div>
   );
 }

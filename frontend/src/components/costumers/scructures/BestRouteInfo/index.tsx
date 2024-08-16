@@ -15,7 +15,7 @@ export function BestRouteInfo() {
     <Text tag="p">Carregando...</Text>
   ) : (
     <div>
-      <Title tag="h2">Melhor rota</Title>
+      <Title tag="h2" titleSize="two">Melhor rota</Title>
       <Text tag="p">Confira baixo a melhor rota entre os clientes</Text>
       {data && data.path ? (
         <ol>

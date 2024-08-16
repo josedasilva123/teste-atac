@@ -17,7 +17,7 @@ export function CreateCostumerModal() {
       
       {isModalVisible ? (
         <Modal onClose={() => setIsModalVisible(false)}>
-          <Title tag="h2">Cadastrar cliente</Title>
+          <Title tag="h2" titleSize="two">Cadastrar cliente</Title>
           <Text tag="p">Preencha os campos para cadastrar um cliente</Text>
           <CreateCostumerForm callback={() => setIsModalVisible(false)} />
         </Modal>

@@ -1,0 +1,43 @@
+%typographyDefaults {
+  &.center {
+    text-align: center;
+  }
+
+  &.white {
+    color: var(--color-white);
+  }
+}
+
+.title {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--color-black);
+
+  @extend %typographyDefaults;
+
+  &.one {
+    font-size: clamp(1.875rem, 5.5vw, 3.125rem);
+  }
+
+  &.two {
+    font-size: clamp(1.625rem, 5vw, 2.625rem);
+  }
+
+  &.three {
+    font-size: clamp(1.375rem, 4.5vw, 2rem);
+  }
+
+  &.four {
+    font-size: clamp(1.125rem, 3.5vw, 1.5rem);
+  }
+}
+
+.text {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-black);
+
+  @extend %typographyDefaults;
+}

@@ -14,7 +14,7 @@ export function BestRouteModal() {
         Calcular rota
       </Button>
       {isModalVisible ? (
-        <Modal onClose={() => setIsModalVisible(false)}>
+        <Modal onClose={() => setIsModalVisible(false)} modalSize="lg">
           <BestRouteInfo />
         </Modal>
       ) : null}

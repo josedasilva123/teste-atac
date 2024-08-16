@@ -11,7 +11,7 @@ export function CreateCostumerModal() {
 
   return (
     <>
-      <Button onClick={() => setIsModalVisible(true)}>
+      <Button buttonVariant="solid1" onClick={() => setIsModalVisible(true)}>
         <Icon icon="add" /> Adicionar cliente
       </Button>
       

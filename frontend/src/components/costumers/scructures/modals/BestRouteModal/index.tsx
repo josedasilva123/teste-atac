@@ -9,7 +9,7 @@ export function BestRouteModal() {
 
   return (
     <>
-      <Button onClick={() => setIsModalVisible(true)}>
+      <Button buttonVariant="outline1" onClick={() => setIsModalVisible(true)}>
         <Icon icon="map" />
         Calcular rota
       </Button>

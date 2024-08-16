@@ -19,7 +19,9 @@ export function CostumerList() {
             Resultados de busca para <strong>{search}</strong> -{" "}
             {costumerList?.length}
           </Text>
-          <Button onClick={() => setSearch("")}>Limpar a busca</Button>
+          <Button buttonVariant="outline1" onClick={() => setSearch("")}>
+            Limpar a busca
+          </Button>
         </div>
       ) : null}
 

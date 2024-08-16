@@ -29,7 +29,13 @@ export function Controls() {
           {...register("search")}
           required
         />
-        <Button type="submit" title="Buscar" aria-label="search">
+        <Button
+          buttonVariant="outline1"
+          buttonSize="round"
+          type="submit"
+          title="Buscar"
+          aria-label="search"
+        >
           <Icon icon="search" />
         </Button>
       </form>

@@ -27,7 +27,7 @@ export function CreateCostumerForm({ callback }: Props) {
     try {
       setLoading(true);
       await createClient.mutateAsync(formData);
-      if(callback) callback();
+      if (callback) callback();
     } catch (error) {
       console.log(error);
     } finally {
@@ -81,7 +81,7 @@ export function CreateCostumerForm({ callback }: Props) {
         />
       </fieldset>
 
-      <Button type="submit" disabled={loading}>
+      <Button buttonVariant="solid1" type="submit" disabled={loading}>
         {loading ? "Cadastrando..." : "Cadastrar"}
       </Button>
     </form>

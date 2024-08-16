@@ -4,3 +4,19 @@
     margin: 0 auto;
     padding: 16px;
 }
+
+.padding-80{
+    padding: clamp(50px, 6vw, 80px) 0;
+}
+
+.background-white{
+    background: var(--color-white);
+}
+
+.background-gray{
+    background: var(--color-gray);
+}
+
+.background-primary-light{
+    background: var(--color-primary-light);
+}

@@ -1,5 +1,5 @@
 interface Props {
-  icon: "close";
+  icon: "close" | "search" | "add";
 }
 
 export function Icon({ icon }: Props) {

@@ -4,6 +4,8 @@ import { useState } from "react";
 import { costumersRequest } from "../../../../../data/costumers/_index";
 import { Text } from "../../../../shared/fragments/_content/Text";
 import { CostumerCard } from "../../../scructures/CostumerCard";
+import { Controls } from "./Controls";
+import { Button } from "../../../../shared/fragments/Button";
 
 export function CostumerList() {
   const [search, setSearch] = useState("");
@@ -20,10 +22,28 @@ export function CostumerList() {
   return isLoading ? (
     <Text tag="p">Carregando...</Text>
   ) : (
-    <ul>
-      {costumerList?.map((costumer) => (
-        <CostumerCard key={costumer.id} costumer={costumer} />
-      ))}
-    </ul>
+    <>
+      <Controls setSearch={setSearch} />
+
+      {search ? (
+        <div>
+          <Text tag="p">
+            Resultados de busca para <strong>{search}</strong> -{" "}
+            {costumerList?.length}
+          </Text>
+          <Button onClick={() => setSearch("")}>Limpar a busca</Button>
+        </div>
+      ) : null}
+
+      {costumerList && costumerList.length > 0 ? (
+        <ul>
+          {costumerList?.map((costumer) => (
+            <CostumerCard key={costumer.id} costumer={costumer} />
+          ))}
+        </ul>
+      ) : (
+        <Text tag="p">Nenhum cliente encontrado</Text>
+      )}
+    </>
   );
 }

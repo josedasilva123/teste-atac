@@ -1,20 +1,24 @@
 import { HTMLAttributes } from "react";
 
+export type TextTags = "p" | "span";
+
+export type TextColors = "white" | "";
+
 interface Props extends HTMLAttributes<HTMLElement> {
   children: React.ReactNode;
-  tag: "p" | "span";
+  tag: TextTags;
   textAlign?: "center" | "";
-  titleColor?: "white" | "";
+  textColor?: TextColors;
 }
 
 export function Text({
   children,
   tag,
   textAlign = "",
-  titleColor = "",
+  textColor = "",
   ...rest
 }: Props) {
-  const textClassName = `text ${textAlign} ${titleColor}`;
+  const textClassName = `text ${textAlign} ${textColor}`;
 
   const properties = { ...rest, className: textClassName };
 

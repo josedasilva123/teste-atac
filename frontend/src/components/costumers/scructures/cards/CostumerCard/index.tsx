@@ -1,6 +1,8 @@
 import { ICostumer } from "../../../../../interfaces/costumers.interface";
-import { Text } from "../../../../shared/fragments/_content/Text";
 import { Title } from "../../../../shared/fragments/_content/Title";
+import { Icon } from "../../../../shared/fragments/Icon";
+import { IconText } from "../../../../shared/structures/IconText";
+import styles from "./style.module.scss";
 
 interface Props {
   costumer: ICostumer;
@@ -8,14 +10,36 @@ interface Props {
 
 export function CostumerCard({ costumer }: Props) {
   return (
-    <li>
-      <Title tag="h3" titleSize="four">{costumer.name}</Title>
-      <Text tag="p">{costumer.email}</Text>
-      <Text tag="p">{costumer.phone}</Text>
-      <div>
-        <Title tag="h4" titleSize="five">Coordenadas</Title>
-        <Text tag="p">X: {costumer.x}</Text>
-        <Text tag="p">Y: {costumer.y}</Text>
+    <li className={styles.card}>
+      <div className={styles.infos}>
+        <Title tag="h3" titleSize="four">
+          {costumer.name}
+        </Title>
+
+        <div>
+          <IconText icon={<Icon icon="mail" />} tag="p">
+            {" "}
+            {costumer.email}
+          </IconText>
+
+          <IconText icon={<Icon icon="phone" />} tag="p">
+            {costumer.phone}
+          </IconText>
+        </div>
+      </div>
+
+      <div className={styles.coordinates}>
+        <Title tag="h4" titleSize="five">
+          Coordenadas
+        </Title>
+        <div>
+          <IconText icon={<Icon icon="location_on" />} tag="p">
+            X: {costumer.x}
+          </IconText>
+          <IconText icon={<Icon icon="location_on" />} tag="p">
+            Y: {costumer.y}
+          </IconText>
+        </div>
       </div>
     </li>
   );

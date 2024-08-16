@@ -1,0 +1,15 @@
+.box {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  span {
+    color: var(--color-primary);
+  }
+
+  &.white {
+    span {
+      color: var(--color-primary-light);
+    }
+  }
+}

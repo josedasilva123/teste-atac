@@ -15,7 +15,9 @@ export function BestRouteModal() {
       </Button>
       {isModalVisible ? (
         <Modal onClose={() => setIsModalVisible(false)} modalSize="lg">
-          <BestRouteInfo />
+          <div>
+            <BestRouteInfo />
+          </div>
         </Modal>
       ) : null}
     </>

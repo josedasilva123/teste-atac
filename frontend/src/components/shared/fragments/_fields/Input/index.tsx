@@ -8,7 +8,7 @@ type Ref = ForwardedRef<HTMLInputElement>;
 
 export const Input = forwardRef(({ label, ...rest }: Props, ref: Ref) => {
   return (
-    <div>
+    <div className="field">
       {label ? <label htmlFor={rest.id}>{label}</label> : null}
       <input ref={ref} {...rest} />
     </div>

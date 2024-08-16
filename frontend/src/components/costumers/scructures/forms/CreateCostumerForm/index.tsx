@@ -1,5 +1,5 @@
 import { SubmitHandler, useForm } from "react-hook-form";
-import { Input } from "../../../../shared/fragments/Input";
+import { Input } from "../../../../shared/fragments/_fields/Input";
 import { Button } from "../../../../shared/fragments/Button";
 import { useState } from "react";
 import { useCostumers } from "../../../providers/CostumersProvider/useCostumers";
@@ -36,7 +36,7 @@ export function CreateCostumerForm({ callback }: Props) {
   };
 
   return (
-    <form onSubmit={handleSubmit(submit)}>
+    <form className="form" onSubmit={handleSubmit(submit)}>
       <Input
         label="Nome"
         placeholder="Seu nome"

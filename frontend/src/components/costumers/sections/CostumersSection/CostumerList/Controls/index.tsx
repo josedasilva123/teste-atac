@@ -1,4 +1,4 @@
-import { Input } from "../../../../../shared/fragments/Input";
+import { Input } from "../../../../../shared/fragments/_fields/Input";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { Button } from "../../../../../shared/fragments/Button";
 import { Icon } from "../../../../../shared/fragments/Icon";

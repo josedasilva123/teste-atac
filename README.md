@@ -16,7 +16,7 @@ docker compose up
 
 ## Rodando sem o docker
 
-Você tem pode pode rodar essa aplicação sem o Docker, para isso será necessário:
+Você também pode rodar essa aplicação sem o Docker, para isso será necessário:
 
 - Node 18+
 - Um banco de dados PostgreSQL
@@ -29,7 +29,7 @@ Selecione a pasta do backend rodando o comando:
 cd backend
 ```
 
-Instale as dependências rodando o comando
+Instale as dependências rodando o comando:
 
 ```bash
 npm install
@@ -46,7 +46,7 @@ DB_PORT=5432
 DB_DATABASE=atac_teste
 ```
 
-Rode o respectivo comando para inciar projeto localmente na porta `3001`.
+Rode o respectivo comando para inciar projeto localmente na porta `3001`:
 
 ```bash
 npm run dev
@@ -60,13 +60,13 @@ Selecione a pasta do frontend rodando o comando:
 cd frontend
 ```
 
-Instale as dependências rodando o comando
+Instale as dependências rodando o comando:
 
 ```bash
 npm install
 ```
 
-Rode o respectivo comando para inciar projeto localmente na porta `8080`.
+Rode o respectivo comando para inciar projeto localmente na porta `8080`:
 
 ```bash
 npm run dev
